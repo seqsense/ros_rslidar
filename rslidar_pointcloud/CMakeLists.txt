@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.1.3)
+cmake_minimum_required(VERSION 2.8.3)
 project(rslidar_pointcloud)
 
 add_compile_options(-std=c++11)
@@ -20,9 +20,6 @@ find_package(catkin REQUIRED COMPONENTS
              ${${PROJECT_NAME}_CATKIN_DEPS} pcl_conversions)
 find_package(Boost COMPONENTS signals)
 find_package(PkgConfig REQUIRED)
-
-set(CMAKE_CXX_STANDARD 14)
-
 include_directories(${catkin_INCLUDE_DIRS}
   ${dynamic_reconfigure_PACKAGE_PATH}/cmake/cfgbuild.cmake
 )

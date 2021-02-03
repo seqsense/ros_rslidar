@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.1.3)
+cmake_minimum_required(VERSION 2.8.3)
 project(rslidar_driver)
 
 add_compile_options(-std=c++11)
@@ -27,6 +27,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
 	std_msgs
   genmsg
+  cv_bridge
   message_generation
 )
 
@@ -34,7 +35,6 @@ find_package(Boost COMPONENTS signals)
 find_package(Boost REQUIRED COMPONENTS thread)
 find_package(PkgConfig REQUIRED)
 
-set(CMAKE_CXX_STANDARD 14)
 
 include_directories(${Boost_INCLUDE_DIR} ${catkin_INCLUDE_DIRS}
 	${dynamic_reconfigure_PACKAGE_PATH}/cmake/cfgbuild.cmake)
