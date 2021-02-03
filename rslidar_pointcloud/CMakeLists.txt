@@ -8,7 +8,6 @@ set(${PROJECT_NAME}_CATKIN_DEPS
     nodelet
     pcl_ros
     roscpp
-    roslib
     sensor_msgs
     tf
     rslidar_driver
