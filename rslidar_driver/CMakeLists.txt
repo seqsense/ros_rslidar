@@ -10,7 +10,6 @@ set(${PROJECT_NAME}_CATKIN_DEPS
     angles
     pcl_ros
     roscpp
-    roslib
     sensor_msgs
     tf
     dynamic_reconfigure

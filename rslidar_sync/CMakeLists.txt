@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(rslidar_sync)
-find_package(catkin REQUIRED roscpp roslib std_msgs sensor_msgs message_filters)
+find_package(catkin REQUIRED roscpp std_msgs sensor_msgs message_filters)
 catkin_package()
 
 include_directories(include
