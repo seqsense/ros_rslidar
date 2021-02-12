@@ -5,6 +5,7 @@
   <arg name="difop_port" default="7788" />
   <arg name="cut_angle" default="0" doc="If set at [0, 360), cut at specific angle feature activated, otherwise use the fixed packets number mode."/>
   <arg name="lidar_param_path" default="$(find rslidar_pointcloud)/data/rs_lidar_32/"/>
+  <arg name="use_rviz" default="false" />
 
   <node  name="rslidar_node" pkg="rslidar_driver" type="rslidar_node" output="screen" >
     <param name="model" value="$(arg model)"/>
@@ -27,6 +28,6 @@
     <param name="intensity_mode" value="1"/>
   </node>
 
-  <node name="rviz" pkg="rviz" type="rviz"  args="-d $(find rslidar_pointcloud)/rviz_cfg/rslidar.rviz" />
+  <node name="rviz" pkg="rviz" type="rviz"  args="-d $(find rslidar_pointcloud)/rviz_cfg/rslidar.rviz" if="$(arg use_rviz)"/>
 
 </launch>
